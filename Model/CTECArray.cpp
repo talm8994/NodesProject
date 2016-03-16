@@ -94,6 +94,34 @@ Type CTECArray<Type>::get(int position)
 		}
 	}
 
+template<class Type>
+int CTECArray<Type> :: nextIndexOf(int startingIndex, Type searchValue)
+{
+    assert(this-> size > 0);
+    assert(startingIndex >= 0 && startingIndex < this-> size);
+    
+    ArrayNode<Type> * current = head;
+    int indexNotFound = -1;
+    
+    for(int index = 0; index<startingIndex; index++)
+    {
+        current = current->getNext();
+    }
+    
+    for(int index = startingIndex; index < this ->size; index++)
+    {
+        if(current->getvalue() == searchValue)
+        {
+            return index;
+        }
+        else
+        {
+            current = current->getValue();
+        }
+    }
+    return indexNotFound;
+ }
+
 /*
  * this fixes it so that it goes back to where it belongs
  */
@@ -115,5 +143,5 @@ void CTECArray<Type>::set(int position, const Type& value)
 					}
 				}
 
-			}
+        }
 }
