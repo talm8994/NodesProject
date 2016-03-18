@@ -17,10 +17,9 @@ private:
 	ArrayNode<Type> * end;
 public:
 	getSize(): int
-
 	CTECList();
-
 	virtual ~CTECList();
+    int indexOf(Type searchValue);
 };
 
 #endif /* MODEL_CTECLIST_H_ */
