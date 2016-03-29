@@ -6,6 +6,7 @@
  */
 
 #include "NodeController.h"
+#include <stdlib.h>
 
 
 NodeController::NodeController()
@@ -32,5 +33,27 @@ void NodeController :: start()
 
 	arrayTimer.stopTimer();
 	arrayTimer.displayInformation();
+}
+
+void NodeController::sortData()
+{
+    CTECArray<int> randomNumberArray(5000);
+    CTECArray<int> randomNumberList;
+    
+    for(int spot = 0; spot < 5000; spot++)
+    {
+        int myRandom = rand();
+        randomNumberArray.set(spot, myRandom);
+        randomNumberList.addToEnd(myRandom);
+        
+    }
+    
+    Timer sortTimer;
+    sortTimer.startTimer();
+    randomNumberArray.selectionSort();
+    sortTimer.stopTimer();
+    sortTimer.resetTimer();
+    
+    
 }
 
