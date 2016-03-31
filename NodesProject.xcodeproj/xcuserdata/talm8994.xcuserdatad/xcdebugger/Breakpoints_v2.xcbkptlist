@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
             endingLineNumber = "98"
-            landmarkName = "nextIndexOf(int startingIndex, Type searchValue)"
+            landmarkName = "get(int position)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

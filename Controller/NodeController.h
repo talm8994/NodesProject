@@ -24,6 +24,11 @@ class NodeController
 private:
 	CTECArray<int> * notHipsterInts;
 	Timer arrayTimer;
+    
+    int * mergeData;
+    void doMergesort();
+    void mergessort(int data [], int size);
+    void merge(int data [], int sizeOne, int sizeTwo);
 
 public:
 	NodeController();
