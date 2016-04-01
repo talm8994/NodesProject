@@ -25,6 +25,11 @@ private:
 	CTECArray<int> * notHipsterInts;
 	Timer arrayTimer;
     
+    void swap(int first, int second)
+    void quicksort(int first, int last);
+    int partitionnt first, int last);
+    void doQuick();
+    
     int * mergeData;
     void doMergesort();
     void mergessort(int data [], int size);
