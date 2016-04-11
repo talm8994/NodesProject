@@ -7,3 +7,23 @@
 //
 
 #include "TreeNode.hpp"
+using namespace:: CTECData;
+
+template <class Type>
+TreeNode.hpp<Type> :: TreeNode.hpp() : Node<Type>()
+{
+    this -> leftChild  nullptr;
+    this->rightChild nullptr;
+    this-> parent nullptr;
+}
+
+template <class Type>
+treeNode<type> :: treeNode(const Type& value) : node<Type(value)
+{
+    
+    this -> leftChild  nullptr;
+    this->rightChild nullptr;
+    this-> parent nullptr;
+    
+    this->setValue(value);
+}
