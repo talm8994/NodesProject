@@ -29,7 +29,10 @@ namespace CTECData
         bool contains(Type value);
         int getSize();
         int getHight();
-        bool isBalanced
+        bool isBalanced();
+        void preorderTraversal(TreeNode<Type> * currentNode);
+        void inorderTraversral(TreeNode<Type> * currentNode);
+        void postorderTraversal(TreeNode<Type> * currentNode);
         
     };
 }
