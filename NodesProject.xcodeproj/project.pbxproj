@@ -48,7 +48,7 @@
 		A38E6BBC1CBC1D3E001A92AC /* TreeNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeNode.cpp; sourceTree = "<group>"; };
 		A38E6BBD1CBC1D3E001A92AC /* TreeNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TreeNode.hpp; sourceTree = "<group>"; };
 		A38E6BBF1CBC2D55001A92AC /* CTECBianaryTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECBianaryTree.cpp; sourceTree = "<group>"; };
-		A38E6BC01CBC2D55001A92AC /* CTECBianaryTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTECBianaryTree.hpp; sourceTree = "<group>"; };
+		A38E6BC01CBC2D55001A92AC /* CTECBianaryTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CTECBianaryTree.hpp; path = Model/CTECBianaryTree.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +68,7 @@
 				A37E56221C99DC1500C1D61A /* Controller */,
 				A37E56261C99DC1500C1D61A /* Model */,
 				A37E56191C99DBB800C1D61A /* Products */,
+				A38E6BC01CBC2D55001A92AC /* CTECBianaryTree.hpp */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,7 +106,6 @@
 				A38E6BBC1CBC1D3E001A92AC /* TreeNode.cpp */,
 				A38E6BBD1CBC1D3E001A92AC /* TreeNode.hpp */,
 				A38E6BBF1CBC2D55001A92AC /* CTECBianaryTree.cpp */,
-				A38E6BC01CBC2D55001A92AC /* CTECBianaryTree.hpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";

@@ -20,6 +20,8 @@ namespace CTECData
         TreeNode_hpp<Type> * leftChild;
         TreeNode_hpp<Type> * rightChild;
         TreeNode_hpp<Type> * parent;
+        TreeNode<type> * getRightmostChild(CTECBianaryTree_hpp<type> RightSubTree);
+        TreeNode<type> * getleftmostChild(CTECBianaryTree_hpp<type> LeftSubTree);
     public:
         TreeNode_hpp();
         TreeNode_hpp(sonst Type& value);
