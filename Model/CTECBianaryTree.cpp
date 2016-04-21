@@ -70,7 +70,27 @@ void CTECBianryTree<Type> :: preorderTraversal(TreeNodePM<Type> * currentNode)
     }
 
 }
+template<class Type>
+TreeNodePm<type> * CTECBianaryTree_hpp<type> :: getrightmostchild(CTECBianaryTree_hpp<type> leftsubtree)
+{
+    treeNode<type> * rightNode = leftSubTree -> getroot();
+    while(rightNOde ->getrihtChild() != nullptr)
+    {
+        rightNode = rightNode->getRightChild();
+    }
+    return rightnode;
+}
 
+template<class Type>
+TreeNodePm<type> * CTECBianaryTree_hpp<type> :: getrightmostchild(CTECBianaryTree_hpp<type> leftsubtree)
+{
+    treeNode<type> * rightNode = leftSubTree -> getroot();
+    while(rightNOde ->getrihtChild() != nullptr)
+    {
+        rightNode = rightNode->getRightChild();
+    }
+    return rightnode;
+}
 
 template<class Type>
 bool CTECBianryTree<Type> :: contains(Type value)
@@ -114,11 +134,11 @@ bool CTECBianryTree<Type> :: contains(Type value, CTECBianaryTree_hpp<Type> * cu
         {
             if(value < currenTree->getValue())
             {
-                isInTree = contains(value, currentTree->getLeftChild());
+                isInTree = contains(value, currentTree->getRightChild());
             }
             else
             {
-                isIntree = contians(value, currentTree->getRightChild());
+                isIntree = contians(value, currentTree->getLeftChild());
             }
             
         }
