@@ -16,6 +16,7 @@ class Node
 private:
 	Type value;
 	Node * pointers;
+    void trytree();
 public:
 	Node();
 	Node(const Type& value);

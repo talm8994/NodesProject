@@ -21,7 +21,21 @@ Node<Type>::Node(const Type& value)
 	this->value= 0;
 	this->pointers =nullptr;
 }
-
+void Node:: tryTree()
+{
+    CTECBinaryTree<int firstTree
+    firstTree.insert(72);
+    firstTree.insert(846);
+    firstTree.insert(-46);
+    firstTree.insert(3);
+    
+    cout <<"aklfja;" << endl;
+    firstTree.inorderTranversal(firstTree.getRoot());
+    cout <<"aklfja;" << endl;
+    firstTree.preorderTranversal(firstTree.getRoot());
+    cout <<"aklfja;" << endl;
+    firstTree.postorderTranversal(firstTree.getRoot());
+}
 
 template<class Type>
 Node<Type>::~Node()

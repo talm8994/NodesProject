@@ -71,6 +71,47 @@ void CTECBianryTree<Type> :: preorderTraversal(TreeNodePM<Type> * currentNode)
 
 }
 template<class Type>
+void CTECBianaryTree_hpp<type> :: remove(const Type& value)
+{
+    TreeNode<type> * current;
+    TreeNode<Type> * trailing;
+    
+    if(!contains(value)
+       {
+           return;
+       }
+       else
+       {
+           current = root;
+           trailing = root;
+           
+           while(current ! = nullptr && current ->getValue() != value)
+           {
+               trailing = current;
+               if(current -> getValue() > value)
+               {
+                   current = current-> gtLeftchild();
+               }
+               else
+               {
+                   current = current-> gerightchild
+               }
+           }
+           if(current == root)
+           {
+               remomove(root);
+           }
+           else if(trailing->getValue() > value)
+           {
+               remove(trailing->getLeftChild())'
+           }
+           else
+           {
+               remove(reailing->getRightChild());
+           }
+       }
+}
+template<class Type>
 TreeNodePm<type> * CTECBianaryTree_hpp<type> :: getrightmostchild(CTECBianaryTree_hpp<type> leftsubtree)
 {
     treeNode<type> * rightNode = leftSubTree -> getroot();
@@ -118,6 +159,48 @@ bool CTECBianryTree<Type> :: contains(Type value)
     
     return isInTree
 }
+       
+template<class Type>
+       voidCTECBanairyTree<type> :: remove (TreeNodePm<Type> * nodToeRemoved)
+       {
+           TreeNodePM<Type> * current;
+           TreeNodePM<Type> * trailing;
+           TreeNodePM<Type> * temp;
+           
+           if(nodeToBeRmoved == nullptr)
+           {
+               cerr << "suck my cock somethings missing"<< endl;
+           }
+           else if (nodeToBERemoved-> getLeftChid() == nullptr && nodeToBeremoed -> getRightChild() == nullptr)
+           {
+               temp = ndeToeRemoved;
+               nodeToBeRemoved = temp->getRightChild();
+               delete temp;
+           }
+           else
+           {
+               current = nodeToBeRemoved-> getLeftChild();
+               trailing - nullptr;
+               
+               while(current->getRtightchild() != nullptr)
+               {
+                   trailing= currend;
+                   current = current ->getRightChild();
+               }
+               
+               nodeTobeRemoved->setValue(current->getValue());
+               
+               if(trailing == nullptr)
+               {
+                   nodeToBeRemoved -> seLftChild(current -> getLeftChild());
+               }
+               else
+               {
+                   trailing->setRightChild(current->getLeftChild();
+               }
+          delete current;
+           }
+       }
 
 template<class Type>
 bool CTECBianryTree<Type> :: contains(Type value, CTECBianaryTree_hpp<Type> * currentTree)

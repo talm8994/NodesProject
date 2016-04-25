@@ -17,6 +17,21 @@ TreeNode.hpp<Type> :: TreeNode.hpp() : Node<Type>()
     this-> parent nullptr;
 }
 
+template <classType>
+void TreeNode<type> :: setLeftChild(TreeNode<type> * leftChild)
+{
+    this -> leftChild = leftChild;
+}
+
+template <classType>
+void TreeNode<type> :: setrightChild(TreeNode<type> * rightChild)
+{
+    this -> rightChild = rightChild;
+}
+
+
+
+
 template <class Type>
 treeNode<type> :: treeNode(const Type& value) : node<Type(value)
 {

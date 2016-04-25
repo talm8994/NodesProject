@@ -22,6 +22,7 @@ namespace CTECData
         TreeNode_hpp<Type> * parent;
         TreeNode<type> * getRightmostChild(CTECBianaryTree_hpp<type> RightSubTree);
         TreeNode<type> * getleftmostChild(CTECBianaryTree_hpp<type> LeftSubTree);
+        void remove(TreeNode<type> nodeToBeRemoved);
     public:
         TreeNode_hpp();
         TreeNode_hpp(sonst Type& value);
