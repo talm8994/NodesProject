@@ -12,7 +12,7 @@ using namespace CTECData;
 
 
 template <class Type>
-CTECBianaryTree<Type> :: CTECBianaryTree()
+CTECBianaryTree <Type> :: CTECBianaryTree()
 {
     this->root = nullptr;
     this-size = 0;
@@ -103,7 +103,7 @@ void CTECBianaryTree_hpp<type> :: remove(const Type& value)
            }
            else if(trailing->getValue() > value)
            {
-               remove(trailing->getLeftChild())'
+               remove(trailing->getLeftChild());
            }
            else
            {
