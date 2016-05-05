@@ -38,7 +38,6 @@ public:
     void depthFirstTraversal(CTECGraph<Type> graph, int vertex);
     void breadthFirstTraversal(CTECGraph<Type> graph, int vertex);
     
-
 };
 
 #endif /* CTECGraph_hpp */

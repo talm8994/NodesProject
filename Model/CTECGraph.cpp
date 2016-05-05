@@ -84,3 +84,21 @@ void CTECGraph<Type>:: removeEdge(int source, int target)
     adjacencyMatrix[source][target] = false;
 }
 
+template <class Type>
+void CTECGraph<Type> :: depthFirstTraversal(CTECGraph<Type> currentGraph, int vertex, bool * markedVertices)
+{
+    std::set<int> connection = currentGraph.neighbors(vertex);
+    std::set<int>::iterator setIterator;
+    
+    markedVertices[vertex] = true;
+    cout << currentGraph[vertex] << endl;
+    
+    for(setIterator = connections.begin(); setIterator != connection.end(); setIterator++)
+    {
+        if(!markedVertices[*setIterator])
+        {
+            depthFirstTraversal(currentGraph, *setIterator, markedVertives);
+        }
+    }
+}
+

@@ -161,7 +161,7 @@ bool CTECBianryTree<Type> :: contains(Type value)
 }
        
 template<class Type>
-       voidCTECBanairyTree<type> :: remove (TreeNodePm<Type> * nodToeRemoved)
+       voidCTECBanairyTree<type> :: remove (TreeNodePm<Type> * nodeToRemoved)
        {
            TreeNodePM<Type> * current;
            TreeNodePM<Type> * trailing;
