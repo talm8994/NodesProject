@@ -12,7 +12,7 @@
 #include <stdio.h>
 
 template <class Type>
-class CTECHashTable
+class HashTable
 {
 private:
     int size;
