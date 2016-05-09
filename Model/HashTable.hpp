@@ -23,6 +23,9 @@ private:
     int findPositin(const Type& value);
     int handelCollision(const Type& value);
     void updateSize();
+    
+    int getNextPrime();
+    bool isPrime(int canidateNumber);
 public:
     HashTable();
     ~HashTable();

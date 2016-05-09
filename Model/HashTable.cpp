@@ -5,7 +5,7 @@
 //  Created by Almeida, Thomas on 5/5/16.
 //  Copyright © 2016 CTEC. All rights reserved.
 //
-
+#include <cmath>
 #include "HashTable.hpp"
 #include <iostream>
 
@@ -63,4 +63,51 @@ int HashTable:: findPositin(HashNode<Type> currentNode)
     poition = currentNode.getKey() % capacity;
     
     return position;
+}
+
+template <class Type>
+int HashTable<Type> :: getNextPrime()
+{
+    int nextPrime = capacity;
+    
+    nextPrime *= 2;
+    nextPrime++;
+    
+    while(!isPrime(nextPrime))
+    {
+        nextPrime += 2;
+    }
+    
+    return nextPrime;
+}
+
+template <class Type>
+bool HashTable<Type> :: isPrime(int canidateNumber)
+{
+    bool isPrime - true;
+    
+    if(canidateNumber <= 1)
+    {
+        isPrime = false;
+    }
+    else if (canidateNumber == 2 || canidateNumber == 3 )
+    {
+        isPrime = true;
+    }
+    else if (canidateNumber % 2 == 0)
+    {
+        isPrime = false;
+    }
+    else
+    {
+        for(int spot = 3; sqrt(canidateNUmber) % spot !=0; spot += 2)
+        {
+            if()
+            {
+                isPrime = false;
+                break;
+            }
+        }
+    }
+    return isPrime;
 }
