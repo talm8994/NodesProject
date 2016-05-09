@@ -8,7 +8,7 @@
 
 #ifndef HashTable_hpp
 #define HashTable_hpp
-
+#include "HashNode.cpp"
 #include <stdio.h>
 
 template <class Type>
@@ -17,8 +17,8 @@ class HashTable
 private:
     int size;
     int capacity;
-    Type * internalStorage;
     double efficiencyPercentage;
+    HashNode<Type> * internalStorage;
     
     int findPositin(const Type& value);
     int handelCollision(const Type& value);
@@ -26,9 +26,9 @@ private:
 public:
     HashTable();
     ~HashTable();
-    void add(const Type & value);
-    bool remove(const Type & value);
-    bool contains(const Type & value);
+    void add(HashNode<Type> currentNode);
+    bool remove(HashNode<Type> currentNode);
+    bool contains(HashNode<Type> currentNode);
     int getSize();
     
     

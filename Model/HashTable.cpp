@@ -17,7 +17,7 @@ HashTable<Type> :: HashTable()
     this->size = 0;
     this->capacity = 101;
     this->efficincyPercentage = .667;
-    this->internalStorage = new Type[capacity];
+    this->internalStorage = new HashNode<Type>[capacity];
 }
 
 template <class Type>
@@ -27,21 +27,21 @@ HashTable<Type> :: ~HashTable()
 }
 
 template <class Type>
-HashTable<Type> :: getSize()
+int HashTable<Type> :: getSize()
 {
     return this-> size;
 }
 
 template <class Type>
-void HashTable<Type> :: add(const Type &value)
+void HashTable<Type> :: add(HashNode<Type> currentNode)
 {
-    if(!contains(value))
+    if(!contains(currentNode))
     {
         if(size/capacity >= efficiencyPercentage)
            {
                updateSize();
            }
-        int insertonIndex = findPositin(value);
+        int insertonIndex = findPositin(currentNode);
         
         if(internalStorage[insertonIndex] != nullptr)
         {
@@ -50,7 +50,17 @@ void HashTable<Type> :: add(const Type &value)
                 insertonIndex = (insertonIndex +1) % capacity;
             }
         }
-        internalStorage[insertonIndex] = value;
+        internalStorage[insertonIndex] = currentNode;
         size++;
     }
+}
+
+template <class Type>
+int HashTable:: findPositin(HashNode<Type> currentNode)
+{
+    int position = 0;
+    
+    poition = currentNode.getKey() % capacity;
+    
+    return position;
 }

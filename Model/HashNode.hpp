@@ -15,6 +15,9 @@ template <class Type>
 class HashNode
 {
 private:
+    int size;
+    this capacity;
+    
     int key;
     Type value;
 public:
