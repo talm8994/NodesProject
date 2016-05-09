@@ -111,3 +111,62 @@ bool HashTable<Type> :: isPrime(int canidateNumber)
     }
     return isPrime;
 }
+
+
+template <class Type>
+void HAshTable<type> :: updateCapacity()
+{
+    int updatedCapacity = getNextPrime();
+    int oldCapacity = capacity;
+    capacity = updatedCapacity;
+    
+    HashNOde<Type> * largerStorage = new HashNOde<type>[capacity];
+    
+    for(int inde = 0; indx < oldCapacity; index++)
+    {
+        if(internalstorage[index] != nullptr)
+        {
+            int UpdadtedINdex = findPosition(internalStorage[index]);
+            largertorage[updatedIndex] = internalStorage[index];
+        }
+    }
+    internalStorage = largerStorage;
+}
+template <class Type>
+bool HashTable<class Type> :: contains(hashNode<Type> currentNode)
+                                       
+{
+    bool isinTable = false;
+    int possobleLocation = findPosition (currentNode);
+    
+    while(internalStorage[possibleLocation] != nullptr && !isInTabe)
+    {
+        if( internalStorage[possibleLOscation].getValue() == currentNode.getValue())
+        {
+            isInTable = true;
+        }
+        possibleLocation = (possibleLocation + 1) % capacity;
+        
+    }
+    
+    return isinTable;
+}
+
+template <class Type>
+bool HashTable<class Type> :: remove(HashNode<Type> currentNode)
+{
+    bool isinTable = false;
+    if(contains(currentNode))
+        
+    
+    while(internalStorage[possibleLocation] != nullptr && !hasBeenRemoved)
+    {
+        if( internalStorage[possibleLOscation].getValue() == currentNode.getValue())
+        {
+            hasBeenRemoved = true;
+            internalStorage[possibleLocation] = nullptr;
+        }
+        possibleLocation = (possibleLocation + 1) % capacity;
+        
+    }
+}
