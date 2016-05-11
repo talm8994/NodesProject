@@ -18,6 +18,10 @@ HashTable<Type> :: HashTable()
     this->capacity = 101;
     this->efficincyPercentage = .667;
     this->internalStorage = new HashNode<Type>[capacity];
+    
+    this->chainedSize = 0;
+    this-> chainedCapacity = 101;
+    this->chainedStorage = new CtecList<HashNode<type>[capacity];
 }
 
 template <class Type>
@@ -111,7 +115,27 @@ bool HashTable<Type> :: isPrime(int canidateNumber)
     }
     return isPrime;
 }
-
+template <class Type>
+HashTable<Type> :: addChained(HashNOde<Type> currentNode)
+{
+    if((cahainedSize/chainedCapacity) >= efficencypresentage)
+    {
+        updateChanindCapacity();
+    }
+    int instersonIndex = findPosition(currentNode);
+    
+    if(chainedStorage[insersionindex] != nullptr)
+    {
+        CtecList<HashTable<Type>> temp = chanedStorage[insersionIndex];
+        temp.addEnd(currentNOde);
+    }
+    else
+    {
+        CtecList<HashTable<Type>> temp = chanedStorage[insersionIndex];
+        temp.addEnd(currentNOde);
+    }
+    chainSize++;
+}
 
 template <class Type>
 void HAshTable<type> :: updateCapacity()
@@ -169,4 +193,15 @@ bool HashTable<class Type> :: remove(HashNode<Type> currentNode)
         possibleLocation = (possibleLocation + 1) % capacity;
         
     }
+}
+
+
+template <class Type>
+int HashTable<Type> :: handleCollision(HashNode<Type> currentNode)
+{
+    int updatedPosition = findPOsition(currentNode);
+    
+    updatedPosition = (47 + (updatedPosition * updatedPosition)) % capacity;
+    
+    return updatedPosition;
 }
