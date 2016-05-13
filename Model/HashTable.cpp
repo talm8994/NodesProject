@@ -17,7 +17,7 @@ HashTable<Type> :: HashTable()
     this->size = 0;
     this->capacity = 101;
     this->efficincyPercentage = .667;
-    this->internalStorage = new HashNode<Type>[capacity];
+    this->internalStorage = new HashNode<Type>*[capacity];
     
     this->chainedSize = 0;
     this-> chainedCapacity = 101;

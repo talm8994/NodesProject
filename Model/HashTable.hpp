@@ -18,7 +18,7 @@ private:
     int size;
     int capacity;
     double efficiencyPercentage;
-    HashNode<Type> * internalStorage;
+    HashNode<Type> ** internalStorage;
     
     int findPositin(const Type& value);
     int handelCollision(const Type& value);
